@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<link rel="stylesheet" type="text/css" href="style.css"> <!-- Link CSS -->
+<link href="css/bootstrap.css" rel="stylesheet"> <!-- Link Bootstrap -->
+<head>
+<link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="description" content="Classement Vin Scène">
+<meta name="keywords" content="Classement Vin Scène Course Bourbonnais">
+<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>Classement JS</title>
+</head>
+<body>
+
+<header>
+<div class="rouge">
+			
+		</div>
+	<div class="blanc">
+		<img class="img" src="http://www.vinsceneenbourbonnais.com/images/template/logo.png">
+		<a href="#">Accueil</a>
+		<a href="#">Classement</a>
+		<a href="#">Inscription</a>
+		<a href="#">8EME Edition - 2016</a>
+		<a href="#">Qui Sommes Nous ?</a>
+		<a href="#">Partenaires</a>
+		<a href="#">Nous Contacter</a>
+		
+		
+	</div>
+</header>
+	<div class="tableau">
+	<input id="string" name="string" type="text" value="" onfocus="clearSearch()" />
+<input type="submit" value="Rechercher" onclick="searchString()" />
+ <script src="jquery.js"></script>
+<script>
+function searchString() {
+   var Sstring = $('#string').val();
+   $("td:contains('" + Sstring + "')").css("background", "lightgrey");
+   var n = $("td:contains('" + Sstring + "')").length;
+   alert( n + " occurence(s) trouvée(s)");
+   $("td:contains('" + Sstring + "')")[0].scrollIntoView(true);
+}
+function clearSearch() {
+   var Sstring = $('#string').val();
+   if (Sstring != '') {
+       $("td:contains('" + Sstring + "')").css("background", "none");
+       $('#string').val('');
+   }
+}
+</script>
+	<table class="avectri">
+  		<thead>
+    		<tr>
+     			<th data-tri="1" class="selection" data-type="num">Numero dossard</th>
+      			<th>Nom</th>
+      			<th>Prénom</th>
+      			<th  data-tri="1" class="selection" data-type="num">Place Classement</th>
+    		</tr>
+ 		 </thead>
+  		<tbody>
+<tr><td>1</td><td>MULOT</td><td> Cyrill</td><td>3</td></tr>
+<tr><td>2</td><td>AMIOT</td><td> Antoin</td><td>2</td></tr>
+<tr><td>3</td><td>BRUNET</td><td> Xavier</td><td>36</td></tr></<td>
+<tr><td>4</td><td>FONTENAY</td><td> Karin</td><td>1</td></tr>
+<tr><td>5</td><td>PRIVAT</td><td> Nicolas</td><td>61</td></tr>
+<tr><td>6</td><td>KAMINSKI</td><td> Stephan</td><td>98</td></tr>
+<tr><td>7</td><td>GARDENT</td><td> Thierry</td><td>51</td></tr>
+<tr><td>8</td><td>HENNENFENT</td><td> Roland</td><td>17</td></tr>
+<tr><td>9</td><td>BENOIT</td><td> Philippe</td><td>39</td></tr>
+<tr><td>10</td><td>LANGEVIN</td><td> Samuel</td><td>58</td></tr>
+<tr><td>11</td><td>REVILLER</td><td> Thierry</td><td>86</td></tr>
+<tr><td>12</td><td>SAVART</td><td> Jerome</td><td>65</td></tr>
+<tr><td>13</td><td>MOULIN</td><td> Franck</td><td>68</td></tr>
+<tr><td>14</td><td>ALENDOURO</td><td> Victor</td><td>66</td></tr>
+<tr><td>15</td><td>PECOT</td><td> Stève</td><td>95</td></tr>
+<tr><td>16</td><td>VASTESAEGER</td><td> Sven</td><td>75</td></tr>
+<tr><td>17</td><td>GARNIER</td><td> Dominique</td><td>23</td></tr>
+<tr><td>18</td><td>FLOURET</td><td> Michel</td><td>46</td></tr>
+<tr><td>19</td><td>MINARD</td><td> Anne laure</td><td>76</td></tr>
+<tr><td>20</td><td>PASQUET</td><td> Frederic</td><td>79</td></tr>
+<tr><td>21</td><td>DEVILLERT</td><td> Christophe</td><td>28</td></tr>
+<tr><td>22</td><td>LAPIERRE</td><td> Michael</td><td>85</td></tr>
+<tr><td>23</td><td>ROUX</td><td> Thierry</td><td>82</td></tr>
+<tr><td>24</td><td>ROULET</td><td> David</td><td>59</td></tr>
+<tr><td>25</td><td>DORDAIN</td><td> Tony</td><td>93</td></tr>
+<tr><td>26</td><td>MENDER</td><td> Milou</td><td>96</td></tr>
+<tr><td>27</td><td>FONTAINE</td><td> Julien</td><td>29</td></tr>
+<tr><td>28</td><td>FOUQUET</td><td> Arnaud</td><td>48</td></tr>
+<tr><td>29</td><td>GICQUEL</td><td> Fabrice</td><td>97</td></tr>
+<tr><td>30</td><td>ARAR</td><td> Didier</td><td>84</td></tr>
+<tr><td>31</td><td>BRAJON</td><td> Bertrand</td><td>57</td></tr>
+<tr><td>32</td><td>SCIACCA</td><td> Aurélia</td><td>50</td></tr>
+<tr><td>33</td><td>LOPES LELO</td><td> Mari</td><td>5</td></tr>
+<tr><td>34</td><td>FORESTIER</td><td> David</td><td>33</td></tr>
+<tr><td>35</td><td>HUET</td><td> Jérôme</td><td>53</td></tr>
+<tr><td>36</td><td>MARSURA</td><td> Philippe</td><td>42</td></tr>
+<tr><td>37</td><td>LINVAL</td><td> Philippe</td><td>69</td></tr>
+<tr><td>38</td><td>HERNOT</td><td> Laurent</td><td>89</td></tr>
+<tr><td>39</td><td>LAKAS</td><td> Patrice</td><td>67</td></tr>
+<tr><td>40</td><td>MARCHAND</td><td> Eric</td><td>40</td></tr>
+<tr><td>41</td><td>BOURNAT</td><td> Thierry</td><td>38</td></tr>
+<tr><td>42</td><td>CAMBONI</td><td> Mario</td><td>25</td></tr>
+<tr><td>43</td><td>BARICHARD</td><td> Jérôme</td><td>47</td></tr>
+<tr><td>44</td><td>SANSELME</td><td> Philippe</td><td>87</td></tr>
+<tr><td>45</td><td>ANDRE</td><td> Serge</td><td>71</td></tr>
+<tr><td>46</td><td>CARTON</td><td> Noël</td><td>24</td></tr>
+<tr><td>47</td><td>PETITJEAN</td><td> Rémy</td><td>64</td></tr>
+<tr><td>48</td><td>TEISSEDRE</td><td> Christian</td><td>37</td></tr>
+<tr><td>49</td><td>AMY</td><td> Jérôme</td><td>99</td></tr>
+<tr><td>50</td><td>MOYNAULT</td><td> Christophe</td><td>35</td></tr>
+<tr><td>51</td><td>VéNIANT</td><td> Romu</td><td>92</td></tr>
+<tr><td>52</td><td>LEBIGUE</td><td> Tristan</td><td>88</td></tr>
+<tr><td>53</td><td>JUGE</td><td> Fabrice</td><td>26</td></tr>
+<tr><td>54</td><td>VINCENT</td><td> Jérémy</td><td>90</td></tr>
+<tr><td>55</td><td>IVART</td><td> Yann</td><td>30</td></tr>
+<tr><td>56</td><td>DESJOUR</td><td> Patrick</td><td>70</td></tr>
+<tr><td>57</td><td>GALLON</td><td> Fabrice</td><td>77</td></tr>
+<tr><td>58</td><td>GUYOT</td><td> Jean-joseph</td><td>27</td></tr>
+<tr><td>59</td><td>CHATARD</td><td> Benoit</td><td>80</td></tr>
+<tr><td>60</td><td>ROUX</td><td> Claud</td><td>9</td></tr>
+<tr><td>61</td><td>KOWALSKI</td><td> Dany</td><td>63</td></tr>
+<tr><td>62</td><td>PERRETTE</td><td> Christophe</td><td>34</td></tr>
+<tr><td>63</td><td>DUBOURDIEU</td><td> Stephane</td><td>81</td></tr>
+<tr><td>64</td><td>LAMBERT</td><td> Guillaume</td><td>54</td></tr>
+<tr><td>65</td><td>FAMBRINI</td><td> Cyril</td><td>52</td></tr>
+<tr><td>66</td><td>MOUNIER</td><td> Christian</td><td>72</td></tr>
+<tr><td>67</td><td>BROSSARD</td><td> Remy</td><td>13</td></tr>
+<tr><td>68</td><td>FOUQUET</td><td> Arnaud</td><td>94</td></tr>
+<tr><td>69</td><td>ARNAUD</td><td> Christian</td><td>44</td></tr>
+<tr><td>70</td><td>MOSNIER</td><td> Bernard</td><td>55</td></tr>
+<tr><td>71</td><td>BERGERET</td><td> Lis</td><td>8</td></tr>
+<tr><td>72</td><td>BERGERET</td><td> Christoph</td><td>7</td></tr>
+<tr><td>73</td><td>LEFEBVRE</td><td> Michel</td><td>91</td></tr>
+<tr><td>74</td><td>FLEURY</td><td> Stephanie</td><td>15</td></tr>
+<tr><td>75</td><td>AUBARD</td><td> Nicolas</td><td>74</td></tr>
+<tr><td>76</td><td>VALLEE</td><td> Nelly</td><td>45</td></tr>
+<tr><td>77</td><td>BERNABEU</td><td> Julien</td><td>73</td></tr>
+<tr><td>78</td><td>DUPRE</td><td> Alain</td><td>78</td></tr>
+<tr><td>79</td><td>SALIGNAT</td><td> Jean-claud</td><td>4</td></tr>
+<tr><td>80</td><td>VOLAT</td><td> Marc</td><td>21</td></tr>
+<tr><td>81</td><td>BENIGAUD</td><td> Sylviane</td><td>18</td></tr>
+<tr><td>82</td><td>LEPAIN</td><td> Laurent</td><td>22</td></tr>
+  		</tbody>
+	</table>
+</div>
+	<script type="text/javascript" src="javascript.js"></script> <!-- Liaison avec JavaScript -->
+</body>
+</html>
